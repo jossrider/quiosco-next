@@ -45,7 +45,11 @@ export default async function ProductForm({ product }: ProductFormProps) {
         <label className='text-slate-800' htmlFor='categoryId'>
           Categoría:
         </label>
-        <select className='block w-full p-3 bg-slate-100' id='categoryId' name='categoryId' defaultValue={product?.categoryId}>
+        <select
+          className='block w-full p-3 bg-slate-100'
+          id='categoryId'
+          name='categoryId'
+          defaultValue={product?.categoryId}>
           <option value=''>-- Seleccione --</option>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
@@ -54,7 +58,7 @@ export default async function ProductForm({ product }: ProductFormProps) {
           ))}
         </select>
       </div>
-      <ImageUpload></ImageUpload>
+      <ImageUpload image={product?.image} />
     </>
   )
 }

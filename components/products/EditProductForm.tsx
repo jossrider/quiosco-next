@@ -13,6 +13,8 @@ export default function EditProductForm({ children }: { children: React.ReactNod
       categoryId: formData.get('categoryId'),
       image: formData.get('image'),
     }
+    console.log(data)
+
     const result = ProductSchema.safeParse(data)
     if (!result.success) {
       result.error.issues.forEach((issue) => {
@@ -20,6 +22,8 @@ export default function EditProductForm({ children }: { children: React.ReactNod
       })
       return
     }
+
+    return
     const response = await createProduct(result.data)
     if (response?.errors) {
       response.errors.forEach((error) => {

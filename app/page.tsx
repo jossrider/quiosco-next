@@ -1,7 +1,15 @@
-import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-  <h1 className='text-fuchsia-400 text-2xl'>Hola Mundo Next.js</h1>
+    <>
+    <div className='flex flex-col items-center mt-10 '>
+      <Link
+        href={'/admin/products'}
+        className='bg-amber-400 w-full lg:w-auto text-xl px-10 py-3 text-center font-bold cursor-pointer'>
+        Coffe Fresh
+      </Link>
+    </div>
+    </>
   )
 }
