@@ -27,7 +27,7 @@ export default function AddProductForm({ children }: { children: React.ReactNode
       })
       return
     }
-    toast.success('Producto creado correctamente!!')
+    toast.success('Producto creado!!')
     router.push('/admin/products')
   }
   return (
